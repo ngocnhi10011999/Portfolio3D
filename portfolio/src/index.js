@@ -2,7 +2,9 @@ import { createRoot } from 'react-dom/client'
 import { Suspense } from 'react'
 import { Logo } from '@pmndrs/branding'
 import './styles.css'
+import './styles_laptop.css'
 import { App } from './App'
+import { LapTop3D } from './LapTop3D'
 
 function Overlay() {
   return (
@@ -20,6 +22,7 @@ function Overlay() {
 createRoot(document.getElementById('root')).render(
   <>
     <Suspense fallback={null}>
+      <LapTop3D />
       <App />
     </Suspense>
     <Overlay />
